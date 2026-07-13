@@ -1,6 +1,35 @@
 [package]
 name = "cargo-mkdist"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
+authors = ["Ivan Chetchasov <vi.is.chapmann@gmail.com>"]
+description = "A Cargo subcommand to build native distribution packages (apt, pacman, etc) directly from Rust, without external tools."
+repository = "https://github.com/vi-is-ramen/cargo-mkdist"
+homepage = "https://github.com/vi-is-ramen/cargo-mkdist"
+documentation = "https://docs.rs/cargo-mkdist"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["cargo", "package", "distribution", "deb", "pacman", "arch", "packaging"]
+categories = ["development-tools::cargo-plugins", "packaging"]
+resolver = "3"
 
 [dependencies]
+serde           = { version = "1.0", features = ["derive"] }
+clap            = { version = "4.6", features = ["derive"] }
+anyhow          = "1.0"
+toml            = "1.1"
+dirs            = "6"
+glob            = "0"
+walkdir         = "2"
+tempfile        = "3"
+petgraph        = "0.8"
+tar             = "0.4"
+flate2          = "1.1"
+cargo_metadata  = { version = "0.23", features = [ "builder" ]}
+ar              = "0.9"
+zstd            = "0.13"
+filetime        = "0.2"
+num-traits = "0.2.19"
+
+[dev-dependencies]
+assert_fs = "1.1"
