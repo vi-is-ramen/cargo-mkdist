@@ -10,7 +10,7 @@ documentation = "https://docs.rs/cargo-mkdist"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
 keywords = ["cargo", "package", "distribution", "packaging"]
-categories = ["development-tools::cargo-plugins", "packaging"]
+categories = ["development-tools::cargo-plugins"]
 resolver = "3"
 
 [dependencies]
